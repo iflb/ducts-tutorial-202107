@@ -18,7 +18,7 @@ var vm = new Vue({
     methods: {
 	redis_get: function(event) {
 	    duct.send(
-		duct.next_rid(), 
+		duct.nextRid(), 
 		duct.EVENT.REDIS_GET,
 		['SAMPLE/TITLE', 'title']
 	    );

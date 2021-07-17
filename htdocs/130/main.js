@@ -25,7 +25,7 @@ function send_message(evt) {
     }
     msg = {'name': name, 'message': message};
     duct.send(
-	duct.next_rid(), 
+	duct.nextRid(), 
 	duct.EVENT.DICT_MESSAGE,
 	msg
 	

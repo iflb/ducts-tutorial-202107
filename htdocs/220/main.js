@@ -18,7 +18,7 @@ function handle_opened(duct) {
 	    });
 	});
     duct.send(
-	duct.next_rid(), 
+	duct.nextRid(), 
 	duct.EVENT.MODEL_MESSAGES,
 	null
     );
@@ -43,7 +43,7 @@ let vm = new Vue({
     methods: {
 	send_message: function (event) {
 	    duct.send(
-		duct.next_rid(), 
+		duct.nextRid(), 
 		duct.EVENT.CTRL_MESSAGES,
 		{'name': this.name, 'message': this.message}
 	    );

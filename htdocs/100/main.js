@@ -17,7 +17,7 @@ duct.open("/ducts/wsd").then( (duct) => {
 
 function say_hello(evt) {
     duct.send(
-	duct.next_rid(), 
+	duct.nextRid(), 
 	duct.EVENT.HELLO_DUCTS,
 	null
     );

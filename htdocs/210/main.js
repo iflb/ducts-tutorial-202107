@@ -19,12 +19,12 @@ duct.open("/ducts/wsd").then( (duct) => {
 	    });
 	});
     duct.send(
-	duct.next_rid(), 
+	duct.nextRid(), 
 	duct.EVENT.REDIS_GET,
 	['SAMPLE/TITLE', 'title']
     );
     duct.send(
-	duct.next_rid(), 
+	duct.nextRid(), 
 	duct.EVENT.MODEL_MESSAGES,
 	null
     );
@@ -46,7 +46,7 @@ var vm = new Vue({
     methods: {
 	send_message: function (event) {
 	    duct.send(
-		duct.next_rid(), 
+		duct.nextRid(), 
 		duct.EVENT.CTRL_MESSAGES,
 		{'name': this.name, 'message': this.message}
 	    );

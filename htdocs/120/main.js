@@ -1,4 +1,8 @@
 let duct = new ducts.Duct();
+duct.catchallEventHandler = (rid, eid, data) => {
+    console.log('rid='+rid+', eid='+eid+', data.type='+typeof(data));
+}
+
 duct.open("/ducts/wsd").then( (duct) => {
     console.log('opened');
     duct.setEventHandler(
@@ -22,7 +26,7 @@ function send_message(evt) {
 	return;
     }
     duct.send(
-	duct.next_rid(), 
+	duct.nextRid(), 
 	duct.EVENT.SEND_TEXT_MESSAGE,
 	message
     );

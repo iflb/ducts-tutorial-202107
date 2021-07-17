@@ -60,7 +60,7 @@ recorder.set_ondata_event_handler(
 	msgs.appendChild(msg);
 	msgs.scrollTop = msgs.scrollHeight;
 	duct.send(
-	    duct.next_rid(), 
+	    duct.nextRid(), 
 	    duct.EVENT.ECHO_BACK_PCM,
 	    buf
 	);
